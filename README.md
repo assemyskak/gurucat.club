@@ -1,2 +1,0 @@
-# gurucat.club
-gurucat.club
