@@ -17,19 +17,85 @@
     <link rel="stylesheet" href="app.css" />
     <title>GuruCat.club</title>
   </head>
-  <body>
+  <body id="gurucat">
     <header>
-      <h1>GuruCat</h1>
+      <h1><a href="#">GuruCat</a></h1>
       <nav>
-        <p><a href="#">Home</a> | <a href="#">About</a> | <a href="#">Contact</a></p>
+        <ul>
+          <li><a href="#bot">Бот</a></li>
+          <li><a href="#about">Мы</a></li>
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#order">Оставить заявку</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
       </nav>
     </header>
-    <section id="header"></section>
+    <main>
+      <section id="bot">
+        <h2>О боте</h2>
+      </section>
+      <section id="mission">
+        <h2>Наша миссия</h2>
+      </section>
+      <section id="features">
+        <h2>Возможности</h2>
+      </section>
+      <section id="benefits">
+        <h2>Преимущества</h2>
+      </section>
+      <section id="about">
+        <h2>О нас</h2>
+      </section>
+      <section id="testimonials">
+        <h2>Отзывы</h2>
+      </section>
+      <section id="pricing">
+        <h2>Тарифы</h2>
+      </section>
+      <section id="order">
+        <h2>Оставить заявку</h2>
+      </section>
+      <section id="faq">
+        <h2>FAQ</h2>
+      </section>
+      <section id="contact">
+        <h2>Наши контакты</h2>
+      </section>
+    </main>
     <footer>
       <nav>
-        <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+        <ul>
+          <li><a href="#bot">О боте</a></li>
+          <li><a href="#mission">Миссия</a></li>
+          <li><a href="#features">Возможности</a></li>
+          <li><a href="#benefits">Преимущества</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#testimonials">Отзывы</a></li>
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#order">Оставить заявку</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Наши контакты</a></li>
+        </ul>
       </nav>
       <p>Copyright © 2022 GuruCat.club</p>
+      <a href="#gurucat">Наверх</a>
     </footer>
+
+    <script>
+      ;(() => {
+        const onScroll = () => {
+          document.body.classList.toggle('scrolled', scrollY > 50)
+        }
+        let timer = null
+        addEventListener('scroll', () => {
+          if (!timer) {
+            timer = requestAnimationFrame(() => {
+              onScroll()
+              timer = null
+            })
+          }
+        })
+      })()
+    </script>
   </body>
 </html>

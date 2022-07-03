@@ -6,6 +6,9 @@
   "author": "Nikita Butenko <nikita@butenko.au>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "dev": "git push dev HEAD:master --force"
+  },
   "prettier": {
     "bracketSpacing": false,
     "arrowParens": "avoid",

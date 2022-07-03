@@ -1,25 +1,94 @@
 body,
 html {
   min-height: 100vh;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+  transition: background-position-y 500ms;
   background: #ffffff url('./hello.svg') no-repeat top center;
   background-attachment: fixed;
-  transition: background-size 500ms;
-  background-size: 30%;
+  background-position-y: -80px;
+  background-size: 50%;
 }
 
-body.ready {
-  background-size: 0;
+body.scrolled {
+  background-position-y: 0;
 }
 
-#app {
-  background: #ffffff;
-  height: 100vh;
-  opacity: 0;
-  transition: opacity 500ms;
+@media screen and (min-width: 500px) {
+  body {
+    background-size: 250px;
+  }
 }
 
-.ready #app {
-  opacity: 1;
+main > section {
+  min-height: 50vh;
+  padding: 1rem;
+}
+
+main > section:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+footer a[href='#gurucat'] {
+  line-height: 5rem;
+  position: fixed;
+  right: 0;
+  bottom: 3rem;
+  min-width: 10rem;
+  min-height: 5rem;
+  padding-top: 4rem;
+  padding-right: 1rem;
+  transition: background-position-x 300ms;
+  text-align: right;
+  background: transparent url('./up.svg') no-repeat center right;
+  background-position-x: 104%;
+}
+
+footer a[href='#gurucat']:hover {
+  background-position-x: 100%;
+}
+
+header {
+  line-height: 30px;
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  margin: 0;
+  padding: 1rem;
+}
+
+header nav {
+  padding: 1rem;
+  text-align: right;
+}
+
+header nav ul {
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  padding: 0.3em;
+  border-radius: 0.3em;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+header nav ul li + li {
+  margin-left: 0.5em;
 }
