@@ -1,0 +1,37 @@
+{
+  "name": "gurucat.club",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:assemyskak/gurucat.club.git",
+  "author": "Nikita Butenko <nikita@butenko.au>",
+  "license": "MIT",
+  "private": true,
+  "prettier": {
+    "bracketSpacing": false,
+    "arrowParens": "avoid",
+    "tabWidth": 2,
+    "bracketSameLine": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false,
+    "printWidth": 120
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "globals": {
+      "React": "readonly",
+      "ReactDOM": "readonly"
+    },
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreUrls": true,
+        "ignoreTrailingComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+body,
+html {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: #ffffff url('./hello.svg') no-repeat top center;
+  background-attachment: fixed;
+  transition: background-size 500ms;
+  background-size: 30%;
+}
+
+body.ready {
+  background-size: 0;
+}
+
+#app {
+  background: #ffffff;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.ready #app {
+  opacity: 1;
+}
