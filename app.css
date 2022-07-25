@@ -38,14 +38,22 @@ section {
   max-width: 1200px;
   margin: auto;
 }
+@media (max-width: 768px) {
+  section {
+    max-width: 100%;
+  }
+
+  section > img {
+    max-width: 100%;
+  }
+}
 
 section h2 {
   overflow: hidden;
-  max-width: 100%;
 }
 
 section h2 img {
-  max-width: 130%;
+  max-width: 140%;
 }
 
 header > nav a {
@@ -59,6 +67,7 @@ header > nav label[for='toggle'] {
 
 header > nav {
   position: fixed;
+  z-index: 1;
   width: 100%;
   height: 50px;
   transition: box-shadow 200ms;
@@ -66,7 +75,6 @@ header > nav {
   color: #000;
   background: #fff;
   box-shadow: 0 5px 10px 0 #fff;
-  z-index: 1;
 }
 
 .scrolled header > nav {
@@ -254,5 +262,32 @@ main > section {
 
   #hi img {
     position: initial;
+  }
+}
+
+#try {
+  position: relative;
+}
+
+#try h2 {
+  max-height: 170px;
+  max-width: 80%;
+}
+
+#try > img {
+  position: absolute;
+  top: -5vw;
+  right: 0;
+  max-width: 40%;
+}
+
+@media (max-width: 768px) {
+  #try h2 {
+    max-height: 20vw;
+  }
+
+  #try > img {
+    position: initial;
+    max-width: 80%;
   }
 }
