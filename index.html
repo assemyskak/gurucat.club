@@ -19,15 +19,23 @@
   </head>
   <body id="gurucat">
     <header>
-      <h1><a href="#">GuruCat</a></h1>
       <nav>
-        <ul>
-          <li><a href="#bot">Бот</a></li>
-          <li><a href="#i-can">Что я могу</a></li>
-          <li><a href="#pricing">Тарифы</a></li>
-          <li><a href="#order">Оставить заявку</a></li>
-          <li><a href="#contact">Контакты</a></li>
-        </ul>
+        <section>
+          <h1><a href="#">GuruCat</a></h1>
+          <input type="checkbox" name="" id="toggle" />
+          <label for="toggle">
+            <i></i>
+            <i></i>
+            <i></i>
+          </label>
+          <ul>
+            <li><a href="#bot">Привет</a></li>
+            <li><a href="#i-can">Что я могу</a></li>
+            <li><a href="#pricing">Тарифы</a></li>
+            <li><a href="#order">Оставить заявку</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </section>
       </nav>
     </header>
     <main>
@@ -116,7 +124,27 @@
         </ul>
       </nav>
       <p>Copyright © 2022 GuruCat.club</p>
-      <a href="#gurucat">Наверх</a>
     </footer>
+
+    <script>
+      ;(() => {
+        const onScroll = () => {
+          const checkbox = document.querySelector('header > nav #toggle:checked')
+          if (checkbox) {
+            checkbox.checked = false
+          }
+          document.body.classList.toggle('scrolled', scrollY > 5)
+        }
+        let timer = null
+        addEventListener('scroll', () => {
+          if (!timer) {
+            timer = requestAnimationFrame(() => {
+              onScroll()
+              timer = null
+            })
+          }
+        })
+      })()
+    </script>
   </body>
 </html>
