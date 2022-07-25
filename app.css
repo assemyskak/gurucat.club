@@ -87,7 +87,4 @@ header nav ul li + li {
 h2 {
 }
 h2 img {
-  transform: scale(0.5);
-  transform-origin: left top;
-  max-width: 200%;
 }
