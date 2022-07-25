@@ -26,7 +26,6 @@ body {
 }
 
 main > section {
-  min-height: 50vh;
   padding: 1rem;
 }
 
@@ -43,7 +42,6 @@ section {
 section h2 {
   overflow: hidden;
   max-width: 100%;
-  margin-top: 64px;
 }
 
 section h2 img {
@@ -68,6 +66,7 @@ header > nav {
   color: #000;
   background: #fff;
   box-shadow: 0 5px 10px 0 #fff;
+  z-index: 1;
 }
 
 .scrolled header > nav {
@@ -219,5 +218,41 @@ header > nav h1 a {
     margin-right: 0;
     margin-bottom: 0.7em;
     margin-left: 20px;
+  }
+}
+
+/* sections */
+main > section {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  padding: 64px 20px 0 20px;
+}
+
+#hi {
+  position: relative;
+  min-height: 350px;
+  padding-top: 120px;
+  padding-left: 400px;
+}
+
+#hi img {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 400px;
+}
+
+#hi p {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+  #hi {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  #hi img {
+    position: initial;
   }
 }
