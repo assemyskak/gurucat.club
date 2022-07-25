@@ -17,15 +17,6 @@ html {
 
 body {
   font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
-  transition: background-position-y 500ms;
-  background: #ffffff url('./hello.svg') no-repeat top center;
-  background-attachment: fixed;
-  background-position-y: -80px;
-  background-size: 50%;
-}
-
-body.scrolled {
-  background-position-y: 0;
 }
 
 @media screen and (min-width: 500px) {

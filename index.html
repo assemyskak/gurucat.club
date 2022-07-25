@@ -120,22 +120,5 @@
       <p>Copyright © 2022 GuruCat.club</p>
       <a href="#gurucat">Наверх</a>
     </footer>
-
-    <script>
-      ;(() => {
-        const onScroll = () => {
-          document.body.classList.toggle('scrolled', scrollY > 100)
-        }
-        let timer = null
-        addEventListener('scroll', () => {
-          if (!timer) {
-            timer = requestAnimationFrame(() => {
-              onScroll()
-              timer = null
-            })
-          }
-        })
-      })()
-    </script>
   </body>
 </html>
