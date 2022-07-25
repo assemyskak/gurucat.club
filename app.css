@@ -85,7 +85,7 @@ header > nav section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 768px;
   height: 64px;
   margin: auto;
 }
@@ -236,6 +236,10 @@ main > section {
   padding: 64px 20px 0 20px;
 }
 
+section > p {
+  margin-bottom: 1em;
+}
+
 #hi {
   position: relative;
   min-height: 350px;
@@ -243,15 +247,11 @@ main > section {
   padding-left: 400px;
 }
 
-#hi img {
+#hi > img {
   position: absolute;
   top: 20px;
   left: 0;
   width: 400px;
-}
-
-#hi p {
-  margin-bottom: 1em;
 }
 
 @media (max-width: 768px) {
@@ -260,7 +260,7 @@ main > section {
     padding-left: 20px;
   }
 
-  #hi img {
+  #hi > img {
     position: initial;
   }
 }
@@ -289,5 +289,34 @@ main > section {
   #try > img {
     position: initial;
     max-width: 80%;
+  }
+}
+
+#target h2 {
+  max-height: 170px;
+}
+
+#target > img {
+  position: absolute;
+  left: 0;
+  margin-top: -130px;
+}
+
+#target ul {
+  margin-left: 450px;
+}
+#target ul:before {
+  content: attr(aria-label);
+  margin-left: -20px;
+}
+@media (max-width: 768px) {
+  #target > img {
+    position: initial;
+    max-width: 80%;
+    margin-top: -70px;
+    margin-left: -30px;
+  }
+  #target ul {
+    margin: 0 2em;
   }
 }
