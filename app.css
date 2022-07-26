@@ -38,6 +38,7 @@ section {
   max-width: 1200px;
   margin: auto;
 }
+
 @media (max-width: 768px) {
   section {
     max-width: 100%;
@@ -270,8 +271,8 @@ section > p {
 }
 
 #try h2 {
-  max-height: 170px;
   max-width: 80%;
+  max-height: 170px;
 }
 
 #try > img {
@@ -292,23 +293,29 @@ section > p {
   }
 }
 
+#target {
+  padding-bottom: 50px;
+}
+
 #target h2 {
   max-height: 170px;
 }
 
 #target > img {
   position: absolute;
-  left: 0;
-  margin-top: -130px;
+  left: 50px;
+  margin-top: -100px;
 }
 
 #target ul {
   margin-left: 450px;
 }
+
 #target ul:before {
-  content: attr(aria-label);
   margin-left: -20px;
+  content: attr(aria-label);
 }
+
 @media (max-width: 768px) {
   #target > img {
     position: initial;
@@ -316,7 +323,40 @@ section > p {
     margin-top: -70px;
     margin-left: -30px;
   }
+
   #target ul {
     margin: 0 2em;
+  }
+}
+
+#important {
+  position: relative;
+}
+
+#important p {
+  padding-right: 350px;
+}
+
+#important h2 {
+  max-height: 170px;
+}
+
+#important > img {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 1000px) {
+  #important > img {
+    top: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  #important p {
+    padding-top: 350px;
+    padding-right: 0;
   }
 }
