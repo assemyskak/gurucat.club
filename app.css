@@ -263,6 +263,9 @@ section > p {
 
   #hi > img {
     position: initial;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -290,7 +293,9 @@ section > p {
 
   #try > img {
     position: initial;
-    max-width: 80%;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -320,9 +325,10 @@ section > p {
 @media (max-width: 768px) {
   #target > img {
     position: initial;
-    max-width: 80%;
-    margin-top: -70px;
-    margin-left: -30px;
+    display: block;
+    max-width: 100%;
+    margin: -70px auto 0 auto;
+    transform: translate(-30px, 0);
   }
 
   #target ul {
@@ -351,13 +357,13 @@ section > p {
 
 @media (max-width: 1000px) {
   #important > img {
-    top: 150px;
+    position: initial;
+    display: block;
+    margin: -80px auto 0 auto;
+    transform: rotate(0);
   }
-}
-
-@media (max-width: 768px) {
   #important p {
-    padding-top: 350px;
+    padding-top: 50px;
     padding-right: 0;
   }
 }
