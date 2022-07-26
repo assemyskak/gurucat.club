@@ -284,6 +284,7 @@ section > p {
 
 @media (max-width: 768px) {
   #try h2 {
+    max-width: 140%;
     max-height: 20vw;
   }
 
