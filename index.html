@@ -2,19 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="mobile-web-app-capable" content="yes" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="yes" name="mobile-web-app-capable" />
     <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <meta name="apple-mobile-web-app-title" content="GuruCat.club" />
-    <meta name="application-name" content="GuruCat.club" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="app.css" />
+      content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover"
+      name="viewport" />
+    <link href="favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <meta content="GuruCat.club" name="apple-mobile-web-app-title" />
+    <meta content="GuruCat.club" name="application-name" />
+    <meta content="#ffffff" name="theme-color" />
+    <link href="app.css" rel="stylesheet" />
     <title>GuruCat.club</title>
   </head>
   <body id="gurucat">
@@ -22,13 +22,26 @@
       <nav>
         <section>
           <h1><a href="#">GuruCat</a></h1>
-          <input type="checkbox" name="" id="toggle" />
+          <input id="toggle" name="" type="checkbox" />
           <label for="toggle">
             <i></i>
             <i></i>
             <i></i>
           </label>
-          <ul>
+          <ul class="overflow">
+            <li><a href="#try">Попробовать бесплатно</a></li>
+            <li><a href="#target">Кому я подойду</a></li>
+            <li><a href="#important">Это для меня важно</a></li>
+            <li><a href="#i-can">Что я могу!</a></li>
+            <li><a href="#i-am-great">Смотри, какой я классный!</a></li>
+            <li><a href="#founders">Основатели</a></li>
+            <li><a href="#history">Как появился GuruCat</a></li>
+            <li><a href="#purrs">Что мурчат котики</a></li>
+            <li><a href="#pricing">Выбирай тариф</a></li>
+            <li><a href="#order">Оставить заявку</a></li>
+            <li><a href="#contact">Ксли что, пиши!</a></li>
+          </ul>
+          <ul class="top">
             <li><a href="#i-can">Что я могу</a></li>
             <li><a href="#pricing">Тарифы</a></li>
             <li><a href="#order">Оставить заявку</a></li>
@@ -39,21 +52,21 @@
     </header>
     <main>
       <section id="hi">
-        <img src="./img/cat/привет.svg" alt="Привет" width="200" />
+        <img alt="Привет" src="./img/cat/привет.svg" width="200" />
         <p>Привет!</p>
         <p>я GuruCat, помогу тебе делиться знаниями легко и просто.</p>
       </section>
 
       <section id="try">
         <h2>
-          <img src="./img/headers/попробовать бесплатно.svg" alt="Попробовать бесплатно" />
+          <img alt="Попробовать бесплатно" src="./img/headers/попробовать бесплатно.svg" />
         </h2>
-        <img src="./img/cat/попробовать%20бесплатно.svg" alt="Привет" width="400" />
+        <img alt="Привет" src="./img/cat/попробовать%20бесплатно.svg" width="400" />
       </section>
 
       <section id="target">
         <h2>
-          <img src="./img/headers/кому я подойду.svg" alt="Кому я подойду" />
+          <img alt="Кому я подойду" src="./img/headers/кому я подойду.svg" />
         </h2>
 
         <p>
@@ -63,7 +76,7 @@
 
         <p>Кто хочет оформить и запустить свой курс легко и быстро без помощи дополнительных специалистов.</p>
 
-        <img src="./img/cat/кому%20я%20подойду.svg" alt="Кому я подойду" width="400" />
+        <img alt="Кому я подойду" src="./img/cat/кому%20я%20подойду.svg" width="400" />
 
         <ul aria-label="Это могут быть:">
           <li>Онлайн курсы</li>
@@ -76,9 +89,9 @@
 
       <section id="important">
         <h2>
-          <img src="./img/headers/это для меня важно.svg" alt="это для меня важно" />
+          <img alt="это для меня важно" src="./img/headers/это для меня важно.svg" />
         </h2>
-        <img src="./img/cat/это%20для%20меня%20важно.svg" alt="это для меня важно" width="400" />
+        <img alt="это для меня важно" src="./img/cat/это%20для%20меня%20важно.svg" width="400" />
         <p>
           Хочу, чтобы все эксперты могли делиться своими знаниями через легкий и удобный сервис и стали счастливее
           ощутив ценность своего продукта и себя.
@@ -87,69 +100,56 @@
 
       <section id="i-can">
         <h2>
-          <img src="./img/headers/что я могу.svg" alt="что я могу" />
+          <img alt="что я могу" src="./img/headers/что я могу.svg" />
         </h2>
       </section>
 
       <section id="i-am-great">
         <h2>
-          <img src="./img/headers/какой я классный.svg" alt="какой я классный" />
+          <img alt="какой я классный" src="./img/headers/какой я классный.svg" />
         </h2>
       </section>
 
       <section id="founders">
         <h2>
-          <img src="./img/headers/основатели.svg" alt="основатели" />
+          <img alt="основатели" src="./img/headers/основатели.svg" />
         </h2>
       </section>
 
       <section id="history">
         <h2>
-          <img src="./img/headers/как появился gurucat.svg" alt="как появился gurucat" />
+          <img alt="как появился gurucat" src="./img/headers/как появился gurucat.svg" />
         </h2>
       </section>
 
       <section id="purrs">
         <h2>
-          <img src="./img/headers/что мурчат котики.svg" alt="что мурчат котики" />
+          <img alt="что мурчат котики" src="./img/headers/что мурчат котики.svg" />
         </h2>
       </section>
 
       <section id="pricing">
         <h2>
-          <img src="./img/headers/выбирай тариф.svg" alt="выбирай тариф" />
+          <img alt="выбирай тариф" src="./img/headers/выбирай тариф.svg" />
         </h2>
       </section>
 
       <section id="order">
         <h2>
-          <img src="./img/headers/оставить заявку.svg" alt="оставить заявку" />
+          <img alt="оставить заявку" src="./img/headers/оставить заявку.svg" />
         </h2>
       </section>
 
       <section id="contact">
         <h2>
-          <img src="./img/headers/если что пиши.svg" alt="если что пиши" />
+          <img alt="если что пиши" src="./img/headers/если что пиши.svg" />
         </h2>
       </section>
     </main>
     <footer>
-      <nav>
-        <ul>
-          <li><a href="#try">Попробовать бесплатно</a></li>
-          <li><a href="#target">Кому я подойду</a></li>
-          <li><a href="#important">Это для меня важно</a></li>
-          <li><a href="#i-can">Что я могу!</a></li>
-          <li><a href="#i-am-great">Смотри, какой я классный!</a></li>
-          <li><a href="#founders">Основатели</a></li>
-          <li><a href="#history">Как появился GuruCat</a></li>
-          <li><a href="#purrs">Что мурчат котики</a></li>
-          <li><a href="#pricing">Выбирай тариф</a></li>
-          <li><a href="#order">Оставить заявку</a></li>
-          <li><a href="#contact">Ксли что, пиши!</a></li>
-        </ul>
-      </nav>
-      <p>Copyright © 2022 GuruCat.club</p>
+      <section>
+        <p>Copyright © 2022 GuruCat.club</p>
+      </section>
     </footer>
 
     <script>

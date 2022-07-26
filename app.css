@@ -34,6 +34,9 @@ a {
   color: #f17906;
 }
 
+footer {
+  text-align: center;
+}
 section {
   max-width: 1200px;
   margin: auto;
@@ -86,9 +89,26 @@ header > nav section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 768px;
   height: 64px;
   margin: auto;
+}
+
+header > nav ul.overflow {
+  display: none;
+}
+
+header > nav ul.top {
+  display: flex;
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  header > nav ul.overflow {
+    display: flex;
+  }
+  header > nav ul.top {
+    display: none;
+  }
 }
 
 header > nav ul {
