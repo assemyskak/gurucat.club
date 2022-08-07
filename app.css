@@ -403,7 +403,7 @@ section > p {
   padding-bottom: 30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   #important p {
   }
 }
@@ -423,22 +423,58 @@ section > p {
   margin-top: -80px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
+  #i-can {
+    min-height: 300px;
+  }
+
   #i-can img[src='./img/cat/смотри что я могу.svg'] {
-    width: 130px;
-    margin-top: 0;
-    margin-left: 0;
+    width: 160px;
+    margin-top: -30px;
+    margin-left: -10px;
   }
 
   #i-can ul {
     margin-top: 20px;
-    margin-left: 130px;
+    margin-left: 140px;
     list-style: none;
   }
 }
 
-#i-am-great,
-a[href='#i-am-great'],
+#i-am-great {
+  min-height: 600px;
+  background-color: #ffe9da;
+}
+
+#i-am-great ul {
+  margin-top: 50px;
+  margin-left: 400px;
+}
+
+#i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
+  position: absolute;
+  width: 500px;
+  margin-top: -80px;
+  margin-left: -100px;
+}
+
+@media (max-width: 768px) {
+  #i-am-great {
+    min-height: 300px;
+  }
+  #i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
+    width: 190px;
+    margin-top: -40px;
+    margin-left: -50px;
+  }
+
+  #i-am-great ul {
+    margin-top: 0;
+    margin-left: 140px;
+    list-style: none;
+  }
+}
+
 #founders,
 a[href='#founders'],
 #history,
