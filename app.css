@@ -8,6 +8,7 @@
 
 body,
 html {
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
@@ -23,12 +24,12 @@ html {
 
 body {
   font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
   body {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
@@ -46,6 +47,7 @@ footer {
 }
 
 .container {
+  position: relative;
   max-width: 800px;
   margin: auto;
 }
@@ -66,7 +68,40 @@ section h2 {
 }
 
 section h2 img {
-  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  section h2 {
+    text-align: left;
+  }
+
+  section h2 img {
+    transform: scale(0.7);
+    transform-origin: left center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  section h2 img {
+    transform: scale(0.5);
+  }
+}
+
+.columns {
+  display: flex;
+  align-content: flex-start;
+  align-items: stretch;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.columns > .left {
+  flex: 1;
+}
+
+.columns > .right {
+  flex: 1;
 }
 
 header > nav a {
@@ -242,8 +277,6 @@ header > nav #toggle:checked ~ label[for='toggle'] i:nth-child(3) {
 
 /* sections */
 main > section {
-  font-size: 1.4em;
-  line-height: 1.4em;
   padding: 70px;
 }
 
@@ -403,7 +436,7 @@ section > p {
   padding-bottom: 30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   #important p {
   }
 }
@@ -423,24 +456,250 @@ section > p {
   margin-top: -80px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
+  #i-can {
+    min-height: 300px;
+  }
+
   #i-can img[src='./img/cat/смотри что я могу.svg'] {
-    width: 130px;
-    margin-top: 0;
-    margin-left: 0;
+    width: 160px;
+    margin-top: -30px;
+    margin-left: -10px;
   }
 
   #i-can ul {
     margin-top: 20px;
-    margin-left: 130px;
+    margin-left: 140px;
     list-style: none;
   }
 }
 
-#i-am-great,
-a[href='#i-am-great'],
-#founders,
-a[href='#founders'],
+#i-am-great {
+  min-height: 600px;
+  background-color: #ffe9da;
+}
+
+#i-am-great ul {
+  margin-top: 50px;
+  margin-left: 400px;
+}
+
+#i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
+  position: absolute;
+  width: 500px;
+  margin-top: -80px;
+  margin-left: -100px;
+}
+
+@media (max-width: 768px) {
+  #i-am-great {
+    min-height: 300px;
+  }
+
+  #i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
+    width: 190px;
+    margin-top: -40px;
+    margin-left: -50px;
+  }
+
+  #i-am-great ul {
+    margin-top: 0;
+    margin-left: 140px;
+    list-style: none;
+  }
+}
+
+#founders .container {
+  min-height: 550px;
+}
+
+#founders h2 {
+  margin-bottom: 40px;
+}
+
+#founders .container {
+  position: relative;
+}
+
+#out-photo {
+  position: absolute;
+}
+
+#out-photo img[src='./img/photo/us.jpg'] {
+  position: absolute;
+  top: 53px;
+  left: 60px;
+  width: 400px;
+}
+
+#out-photo img[src='./img/frames/рамка квадратная.svg'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 505px;
+}
+
+#founders ul {
+  margin-top: 0;
+  margin-left: 531px;
+}
+
+@media (min-width: 769px) {
+  #founders ul:before {
+    position: absolute;
+    top: 494px;
+    left: 97px;
+    width: 505px;
+  }
+}
+
+#alem-photo {
+  position: relative;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 540px;
+}
+
+#alem-photo img[src='./img/photo/Alem.jpg'] {
+  position: absolute;
+  top: 23px;
+  left: 19px;
+  width: 200px;
+}
+
+#alem-photo img[src='./img/frames/рамка круглая.svg'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 230px;
+}
+
+#founders img[src='./img/cat/куку.svg'] {
+  position: absolute;
+  bottom: -70px;
+  left: 605px;
+}
+
+@media (max-width: 768px) {
+  #founders .container {
+    min-height: 350px;
+  }
+
+  #founders h2 {
+    margin-bottom: 20px;
+  }
+
+  #out-photo img[src='./img/photo/us.jpg'] {
+    top: 20px;
+    left: 23px;
+    width: 120px;
+  }
+
+  #out-photo img[src='./img/frames/рамка квадратная.svg'] {
+    top: 0;
+    left: 0;
+    width: 160px;
+  }
+
+  #founders ul {
+    margin-top: 0;
+    margin-left: 170px;
+  }
+
+  #alem-photo {
+    position: relative;
+    height: 130px;
+    margin-top: 10px;
+    margin-left: 210px;
+  }
+
+  #alem-photo img[src='./img/photo/Alem.jpg'] {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 100px;
+  }
+
+  #alem-photo img[src='./img/frames/рамка круглая.svg'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 115px;
+  }
+
+  #founders img[src='./img/cat/куку.svg'] {
+    position: absolute;
+    bottom: -40px;
+    left: 242px;
+    width: 50px;
+  }
+}
+
+#meet {
+  background-color: #ffe9da;
+}
+
+#meet .container {
+}
+
+#meet ul {
+}
+
+#meet img[src='./img/frames/рамка квадратная.svg'] {
+  position: relative;
+  width: 100%;
+}
+
+#assem-photo:after,
+#nikita-photo:after {
+  position: absolute;
+  bottom: 9%;
+  left: 0;
+  width: 100%;
+  content: attr(aria-label);
+  text-align: center;
+}
+
+#assem-photo {
+  position: relative;
+}
+
+#assem-photo .photo {
+  position: absolute;
+  top: 11%;
+  left: 12%;
+  overflow: hidden;
+  width: 80%;
+  height: 68%;
+}
+
+#assem-photo .photo img {
+  position: absolute;
+  top: -4%;
+  left: 0;
+  width: 100%;
+}
+
+#nikita-photo {
+  position: relative;
+}
+
+#nikita-photo .photo {
+  position: absolute;
+  top: 11%;
+  left: 12%;
+  overflow: hidden;
+  width: 80%;
+  height: 68%;
+}
+
+#nikita-photo .photo img {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+}
+
 #history,
 a[href='#history'],
 #purrs,

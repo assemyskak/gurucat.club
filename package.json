@@ -7,7 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "git push dev HEAD:master --force"
+    "dev": "git push dev HEAD:master --force",
+    "svg": "svgo --pretty --multipass -f img --final-newline --recursive"
   },
   "prettier": {
     "bracketSpacing": false,
