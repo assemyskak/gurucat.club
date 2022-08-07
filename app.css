@@ -88,6 +88,22 @@ section h2 img {
   }
 }
 
+.columns {
+  display: flex;
+  align-content: flex-start;
+  align-items: stretch;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.columns > .left {
+  flex: 1;
+}
+
+.columns > .right {
+  flex: 1;
+}
+
 header > nav a {
   color: inherit;
 }
@@ -544,7 +560,7 @@ section > p {
   margin-left: 540px;
 }
 
-#alem-photo img[src='./img/photo/alem.jpg'] {
+#alem-photo img[src='./img/photo/Alem.jpg'] {
   position: absolute;
   top: 23px;
   left: 19px;
@@ -597,7 +613,7 @@ section > p {
     margin-left: 210px;
   }
 
-  #alem-photo img[src='./img/photo/alem.jpg'] {
+  #alem-photo img[src='./img/photo/Alem.jpg'] {
     position: absolute;
     top: 12px;
     left: 10px;
@@ -617,6 +633,71 @@ section > p {
     left: 242px;
     width: 50px;
   }
+}
+
+#meet {
+  background-color: #ffe9da;
+}
+
+#meet .container {
+}
+
+#meet ul {
+}
+
+#meet img[src='./img/frames/рамка квадратная.svg'] {
+  position: relative;
+  width: 100%;
+}
+
+#assem-photo:after,
+#nikita-photo:after {
+  position: absolute;
+  bottom: 9%;
+  left: 0;
+  width: 100%;
+  content: attr(aria-label);
+  text-align: center;
+}
+
+#assem-photo {
+  position: relative;
+}
+
+#assem-photo .photo {
+  position: absolute;
+  top: 11%;
+  left: 12%;
+  overflow: hidden;
+  width: 80%;
+  height: 68%;
+}
+
+#assem-photo .photo img {
+  position: absolute;
+  top: -4%;
+  left: 0;
+  width: 100%;
+}
+
+#nikita-photo {
+  position: relative;
+}
+
+#nikita-photo .photo {
+  position: absolute;
+  top: 11%;
+  left: 12%;
+  overflow: hidden;
+  width: 80%;
+  height: 68%;
+}
+
+#nikita-photo .photo img {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
 }
 
 #history,
