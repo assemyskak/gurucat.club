@@ -67,9 +67,6 @@ section h2 {
   text-align: center;
 }
 
-section h2 img {
-}
-
 @media (max-width: 768px) {
   section h2 {
     text-align: left;
@@ -78,7 +75,7 @@ section h2 img {
   section h2 img {
     transform: scale(0.7);
     transform-origin: left center;
-    text-align: center;
+    /* text-align: center; */
   }
 }
 
@@ -700,8 +697,91 @@ section > p {
   width: 100%;
 }
 
-#history,
-a[href='#history'],
+#history {
+}
+
+#history .container {
+  min-height: 400px;
+}
+
+#history h2 {
+  text-align: right;
+}
+
+#history img[src='./img/headers/как появился gurucat.svg'] {
+  width: 50%;
+  transform: none;
+}
+
+#history img[src='./img/cat/как появился gurucat.svg'] {
+  position: absolute;
+  top: -8%;
+  left: 18%;
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  #history img[src='./img/cat/как появился gurucat.svg'] {
+    top: -4%;
+  }
+}
+
+#history img[src='./img/frames/рамка круглая.svg'] {
+  position: relative;
+  width: 100%;
+}
+
+#history .photo {
+  position: absolute;
+  top: 9%;
+  left: 8%;
+  overflow: hidden;
+  width: 86%;
+  height: 90%;
+}
+
+#history .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#history .assem,
+#history .nikita {
+  position: relative;
+  width: 30%;
+}
+
+#history .assem {
+  margin-top: 7%;
+  margin-bottom: -25%;
+  margin-left: auto;
+}
+
+#history .nikita {
+  margin-top: 5%;
+  margin-bottom: -30%;
+}
+
+#history .quote1 {
+  display: block;
+  width: 60%;
+  padding-bottom: 5%;
+}
+
+#history .quote2 {
+  width: 80%;
+  margin-top: 5%;
+}
+
+#history .quote3 {
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 40%;
+  padding-bottom: 15%;
+}
+
 #purrs,
 a[href='#purrs'],
 #pricing,
