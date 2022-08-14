@@ -731,6 +731,13 @@ section > p {
   margin: 5% auto;
 }
 
+#examples img[src='./img/cat/примеры.svg'] {
+  position: absolute;
+  top: 25%;
+  right: -5%;
+  width: 30%;
+}
+
 .screenshot {
   position: relative;
 }
@@ -738,10 +745,10 @@ section > p {
 .screenshot .photo {
   position: absolute;
   top: 4.5%;
-  left: 8.8%;
+  left: 10.6%;
   overflow: hidden;
-  width: 79.7%;
-  height: 92%;
+  width: 75.6%;
+  height: 91.2%;
 }
 
 .screenshot .photo img {
@@ -752,7 +759,7 @@ section > p {
 }
 
 .screenshot img[src='./img/frames/рамка скриншот.svg'] {
-  position: relative;
+  /* position: relative; */
   width: 100%;
 }
 
