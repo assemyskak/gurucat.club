@@ -309,6 +309,18 @@ section > p {
   margin-bottom: 1em;
 }
 
+.stars:before,
+.stars:after {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.6em;
+  margin: 0 0.5em;
+  content: ' ';
+  vertical-align: middle;
+  background: transparent url('./img/star.svg') no-repeat left top;
+  background-size: 1.3em;
+}
+
 #hi {
   position: relative;
   width: 700px;
@@ -416,17 +428,6 @@ section > p {
 
 #important p {
   text-align: center;
-}
-
-#important p:before,
-#important p:after {
-  display: inline-block;
-  width: 1.7em;
-  height: 1.5em;
-  content: ' ';
-  vertical-align: middle;
-  background: transparent url('./img/star.svg') no-repeat left top;
-  background-size: 1.3em;
 }
 
 #important h2 {
@@ -780,6 +781,57 @@ section > p {
   margin-top: 10%;
   margin-left: 40%;
   padding-bottom: 15%;
+}
+
+#history-made {
+  background-color: #ffe9da;
+}
+
+#history-made .quote1 {
+  width: 80%;
+}
+
+#history-made .quote1 p {
+  margin-bottom: 1em;
+}
+
+#history-made .quote2 {
+  text-align: center;
+}
+
+#history-made img[src="./img/лого.svg"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+}
+
+#history-made img[src='./img/frames/рамка круглая.svg'] {
+  position: relative;
+  width: 100%;
+}
+
+#history-made .umbrella {
+  position: relative;
+  width: 30%;
+  margin: 5% auto;
+}
+
+#history-made .photo {
+  position: absolute;
+  top: 9%;
+  left: 8%;
+  overflow: hidden;
+  width: 86%;
+  height: 90%;
+}
+
+#history-made .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 50%;
 }
 
 #purrs,
