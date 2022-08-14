@@ -774,6 +774,63 @@ section > p {
 #pricing {
 }
 
+table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+table th,
+table td::before {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+table tr {
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+  border-bottom: 1px solid #f8d0ba;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    font-size: 0.8em;
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid #f17906;
+  }
+
+  table td::before {
+    font-weight: bold;
+    float: left;
+    content: attr(data-label);
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
 #order,
 a[href='#order'],
 #contact,
