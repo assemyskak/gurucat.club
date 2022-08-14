@@ -831,10 +831,29 @@ table td {
   }
 }
 
-#order,
-a[href='#order'],
-#contact,
-a[href='#contact'],
-.wip {
-  display: none;
+#order {
+  padding-top: 0;
+}
+
+#order .left {
+  flex: 0.4;
+  text-align: right;
+}
+
+#order .right {
+  padding-top: 5%;
+}
+
+#order img[src='./img/cat/оставить заявку.svg'] {
+  width: 80%;
+}
+
+#order img[src='./img/buttons/оставить заявку.svg'] {
+  max-width: 100%;
+}
+
+#contact img[src='./img/cat/гуру.svg'] {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
 }
