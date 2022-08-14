@@ -716,7 +716,7 @@ section > p {
 
 #history img[src='./img/cat/как появился gurucat.svg'] {
   position: absolute;
-  top: -8%;
+  top: -3%;
   left: 18%;
   width: 25%;
 }
@@ -834,8 +834,54 @@ section > p {
   border-radius: 50%;
 }
 
-#purrs,
-a[href='#purrs'],
+#examples {
+}
+
+#examples .screenshot {
+  width: 60%;
+  margin: 5% auto;
+}
+
+.screenshot {
+  position: relative;
+}
+
+.screenshot .photo {
+  position: absolute;
+  top: 4.5%;
+  left: 8.8%;
+  overflow: hidden;
+  width: 79.7%;
+  height: 92%;
+}
+
+.screenshot .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.screenshot img[src='./img/frames/рамка скриншот.svg'] {
+  position: relative;
+  width: 100%;
+}
+
+#purrs {
+}
+
+#purrs .screenshot {
+  width: 60%;
+  margin: 5% auto;
+}
+
+#purrs img[src="./img/cat/что мурчат котики.svg"] {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 20%;
+}
+
 #pricing,
 a[href='#pricing'],
 #order,
