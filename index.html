@@ -19,7 +19,9 @@
   </head>
   <body id="gurucat">
     <header>
-      <a href="#" id="logo"> <img src="./img/лого.svg" /> </a>
+      <a href="#" id="logo">
+        <img src="./img/лого.svg" />
+      </a>
       <nav>
         <input id="toggle" name="" type="checkbox" />
         <label for="toggle">
@@ -36,6 +38,7 @@
           <li><a href="#founders">Основатели</a></li>
           <li><a href="#meet">Давай знакомиться</a></li>
           <li><a href="#history">Как появился GuruCat</a></li>
+          <li><a href="#examples">Примеры курсов</a></li>
           <li><a href="#purrs">Что мурчат котики</a></li>
           <li><a href="#pricing">Выбирай тариф</a></li>
           <li><a href="#order">Оставить заявку</a></li>
@@ -45,15 +48,25 @@
     </header>
     <main>
       <section id="hi">
-        <img src="./img/привет.svg" width="200" />
-        <img src="./img/cat/гуру.svg" width="200" />
-        <p>я GuruCat, помогу тебе делиться знаниями легко и просто.</p>
+        <div class="container">
+          <div class="columns">
+            <div class="left">
+              <img src="./img/привет.svg" />
+              <img src="./img/cat/гуру.svg" />
+            </div>
+            <div class="right">
+              <p>я GuruCat, помогу тебе делиться знаниями легко и просто.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="try">
-        <a href="https://t.me/Assem_Yskak" target="_blank">
-          <img src="./img/buttons/попробовать бесплатно.svg" />
-        </a>
+        <div class="container">
+          <a href="https://t.me/GuruCatClub" target="_blank">
+            <img src="./img/buttons/попробовать бесплатно.svg" />
+          </a>
+        </div>
       </section>
 
       <section id="target">
@@ -69,15 +82,18 @@
 
           <p>Кто хочет оформить и запустить свой курс легко и быстро без помощи дополнительных специалистов.</p>
 
-          <img src="./img/cat/кому я подойду.svg" width="400" />
-
-          <ul aria-label="Это могут быть:">
-            <li>Онлайн курсы</li>
-            <li>Мастер-классы</li>
-            <li>Марафоны</li>
-            <li>Подписка на контент</li>
-            <li>Истории, рассказы</li>
-          </ul>
+          <div class="columns">
+            <div class="left"><img src="./img/cat/кому я подойду.svg" /></div>
+            <div class="right">
+              <ul aria-label="Это могут быть:">
+                <li>Онлайн курсы</li>
+                <li>Мастер-классы</li>
+                <li>Марафоны</li>
+                <li>Подписка на контент</li>
+                <li>Истории, рассказы</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -86,7 +102,7 @@
           <h2>
             <img src="./img/headers/это для меня важно.svg" />
           </h2>
-          <p>
+          <p class="stars">
             Хочу, чтобы все эксперты могли делиться своими знаниями через легкий и удобный сервис и стали счастливее
             ощутив ценность своего продукта и себя.
           </p>
@@ -98,15 +114,20 @@
           <h2>
             <img src="./img/headers/что я могу.svg" />
           </h2>
-          <img src="./img/cat/смотри что я могу.svg" width="300" />
-
-          <ul>
-            <li>Сможешь получать и проверять домашние задания</li>
-            <li>Можешь разделить права админа и создавать курс с помощником</li>
-            <li>Сможешь с легкостью предоставить доступ на свой платный контент</li>
-            <li>Есть возможность создать Telegram лендинг</li>
-            <!--<li>Защита от копирования визуального медиа контента</li>-->
-          </ul>
+          <div class="columns">
+            <div class="left">
+              <img src="./img/cat/смотри что я могу.svg" width="300" />
+            </div>
+            <div class="right">
+              <ul>
+                <li>Сможешь получать и проверять домашние задания</li>
+                <li>Можешь разделить права админа и создавать курс с помощником</li>
+                <li>Сможешь с легкостью предоставить доступ на свой платный контент</li>
+                <li>Есть возможность создать Telegram лендинг</li>
+                <!--<li>Защита от копирования визуального медиа контента</li>-->
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -116,15 +137,20 @@
             <img src="./img/headers/какой я классный.svg" />
           </h2>
 
-          <img src="./img/cat/смотри какой я классный.svg" width="300" />
-
-          <ul>
-            <li>Легко создашь свой онлайн курс самостоятельно прямо на телефоне</li>
-            <li>Доступная цена</li>
-            <li>Безлимитное количество пользователей</li>
-            <li>Безлимитное количество уроков</li>
-            <li>Простой и понятный интерфейс для твоих учеников</li>
-          </ul>
+          <div class="columns">
+            <div class="left">
+              <img src="./img/cat/смотри какой я классный.svg" width="300" />
+            </div>
+            <div class="right">
+              <ul>
+                <li>Легко создашь свой онлайн курс самостоятельно прямо на телефоне</li>
+                <li>Доступная цена</li>
+                <li>Безлимитное количество пользователей</li>
+                <li>Безлимитное количество уроков</li>
+                <li>Простой и понятный интерфейс для твоих учеников</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -134,23 +160,31 @@
             <img src="./img/headers/основатели.svg" />
           </h2>
 
-          <div id="out-photo">
-            <img src="./img/photo/us.jpg" />
-            <img src="./img/frames/рамка квадратная.svg" />
+          <div class="columns">
+            <div class="left">
+              <div aria-label="Привет! Мы создатели бота Gurucat" id="our-photo">
+                <div class="photo">
+                  <img src="./img/photo/us.jpg" />
+                </div>
+                <img src="./img/frames/рамка квадратная.svg" />
+              </div>
+            </div>
+            <div class="right">
+              <ul>
+                <li>Влюблённая парочка</li>
+                <li>Муж и Жена</li>
+                <li>Друзья</li>
+                <li>А еще у нас есть Алемчик</li>
+              </ul>
+
+              <div id="alem-photo">
+                <div class="photo">
+                  <img src="./img/photo/Alem.jpg" />
+                </div>
+                <img src="./img/frames/рамка круглая.svg" />
+              </div>
+            </div>
           </div>
-
-          <ul aria-label="Привет! Мы создатели бота Gurucat">
-            <li>Влюблённая парочка</li>
-            <li>Муж и Жена</li>
-            <li>Друзья</li>
-            <li>А еще у нас есть Алемчик</li>
-          </ul>
-
-          <div id="alem-photo">
-            <img src="./img/photo/Alem.jpg" />
-            <img src="./img/frames/рамка круглая.svg" />
-          </div>
-
           <img src="./img/cat/куку.svg" width="100" />
         </div>
       </section>
@@ -237,28 +271,183 @@
         </div>
       </section>
 
+      <section id="history-made">
+        <div class="container">
+          <img src="./img/лого.svg" />
+          <div class="quote1">
+            <p>Это было то, что изначально хотелось!</p>
+            <ul aria-label="Делать онлайн продукт, чтобы было">
+              <li>Легко. Удобно. И даже красиво</li>
+              <li>Простой функционал</li>
+              <li>Возможность делать свой экспертный контент прямо в Телеграм</li>
+            </ul>
+          </div>
+
+          <div class="umbrella">
+            <div class="photo">
+              <img src="img/photo/umbrella.jpg" />
+            </div>
+            <img src="./img/frames/рамка круглая.svg" />
+          </div>
+
+          <div class="quote2">
+            <p>И мы подумали:</p>
+            <p class="stars">Другим экспертам тоже нужен такой Бот!</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="examples">
+        <div class="container">
+          <h2>
+            <img src="./img/headers/примеры курсов.svg" />
+          </h2>
+
+          <img src="./img/cat/примеры.svg" />
+
+          <div class="screenshot">
+            <div class="photo">
+              <video controls width="100%">
+                <source src="./img/МК от Асем.mp4" type="video/mp4" />
+                Видео не поддерживается
+              </video>
+            </div>
+            <img src="./img/frames/рамка скриншот.svg" />
+          </div>
+        </div>
+      </section>
+
       <section id="purrs">
-        <h2>
-          <img src="./img/headers/что мурчат котики.svg" />
-        </h2>
+        <div class="container">
+          <h2>
+            <img src="./img/headers/что мурчат котики.svg" />
+          </h2>
+
+          <img src="./img/cat/что мурчат котики.svg" />
+
+          <div class="screenshot">
+            <div class="photo">
+              <video controls width="100%">
+                <source src="./img/Отзыв от Марии.mp4" type="video/mp4" />
+                Видео не поддерживается
+              </video>
+            </div>
+            <img src="./img/frames/рамка скриншот.svg" />
+          </div>
+        </div>
       </section>
 
       <section id="pricing">
-        <h2>
-          <img src="./img/headers/выбирай тариф.svg" />
-        </h2>
+        <div class="container">
+          <h2>
+            <img src="./img/headers/выбирай тариф.svg" />
+          </h2>
+
+          <table width="100%">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Котик</th>
+                <th>Про</th>
+                <th>Гуру</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Страницы</td>
+                <td data-label="Котик">3</td>
+                <td data-label="Про">безлимит</td>
+                <td data-label="Гуру">безлимит</td>
+              </tr>
+              <tr>
+                <td>Подписчики бота</td>
+                <td data-label="Котик">200</td>
+                <td data-label="Про">безлимит</td>
+                <td data-label="Гуру">безлимит</td>
+              </tr>
+              <tr>
+                <td>Количество ботов</td>
+                <td data-label="Котик">1</td>
+                <td data-label="Про">1</td>
+                <td data-label="Гуру">3</td>
+              </tr>
+              <tr>
+                <td>Базовая аналитика</td>
+                <td data-label="Котик">✔️</td>
+                <td data-label="Про">✔️</td>
+                <td data-label="Гуру">✔️</td>
+              </tr>
+              <tr>
+                <td>Расширенная аналитика</td>
+                <td data-label="Котик">&nbsp;</td>
+                <td data-label="Про">✔️</td>
+                <td data-label="Гуру">✔️</td>
+              </tr>
+              <tr>
+                <td>Премиум доступ</td>
+                <td data-label="Котик">&nbsp;</td>
+                <td data-label="Про">✔️</td>
+                <td data-label="Гуру">✔️</td>
+              </tr>
+              <tr>
+                <td>Тех. поддержка</td>
+                <td data-label="Котик">&nbsp;</td>
+                <td data-label="Про">✔️</td>
+                <td data-label="Гуру">✔️</td>
+              </tr>
+              <tr>
+                <td>Домашнее задание</td>
+                <td data-label="Котик">&nbsp;</td>
+                <td data-label="Про">✔️</td>
+                <td data-label="Гуру">✔️</td>
+              </tr>
+              <tr>
+                <td>Телеграм лендинг</td>
+                <td data-label="Котик">&nbsp;</td>
+                <td data-label="Про">&nbsp;</td>
+                <td data-label="Гуру">✔️</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Оплата в месяц</td>
+                <td data-label="Котик">бесплатный</td>
+                <td data-label="Про">$10</td>
+                <td data-label="Гуру">$18</td>
+              </tr>
+              <tr>
+                <td>Оплата в год</td>
+                <td data-label="Котик">&nbsp;</td>
+                <td data-label="Про">100$</td>
+                <td data-label="Гуру">180$</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </section>
 
       <section id="order">
-        <h2>
-          <img src="./img/headers/оставить заявку.svg" />
-        </h2>
+        <div class="container">
+          <div class="columns">
+            <div class="left">
+              <img src="./img/cat/оставить заявку.svg" />
+            </div>
+            <div class="right">
+              <a href="https://t.me/GuruCatClub" target="_blank">
+                <img src="./img/buttons/оставить заявку.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="contact">
-        <h2>
-          <img src="./img/headers/если что пиши.svg" />
-        </h2>
+        <div class="container">
+          <h2>
+            <img src="./img/headers/если что пиши.svg" />
+          </h2>
+          <img src="./img/cat/гуру.svg" />
+        </div>
       </section>
     </main>
     <footer>

@@ -74,8 +74,7 @@ section h2 {
 
   section h2 img {
     transform: scale(0.7);
-    transform-origin: left center;
-    /* text-align: center; */
+    transform-origin: left bottom;
   }
 }
 
@@ -90,7 +89,7 @@ section h2 {
   align-content: flex-start;
   align-items: stretch;
   margin-top: 20px;
-  gap: 40px;
+  gap: 4%;
 }
 
 .columns > .left {
@@ -150,6 +149,14 @@ header > nav {
   top: 5px;
   width: 64px;
   margin-left: -32px;
+}
+
+@media (max-width: 700px) {
+  #logo {
+    top: 5px;
+    width: 64px;
+    margin-left: -32px;
+  }
 }
 
 header > nav > section {
@@ -277,7 +284,7 @@ main > section {
   padding: 70px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   main > section {
     padding: 40px 10px;
   }
@@ -309,55 +316,51 @@ section > p {
   margin-bottom: 1em;
 }
 
-#hi {
-  position: relative;
-  width: 700px;
-  min-height: 350px;
-  margin: 0 auto;
-  padding-top: 210px;
-  padding-left: 360px;
+.stars:before,
+.stars:after {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.6em;
+  margin: 0 0.5em;
+  content: ' ';
+  vertical-align: middle;
+  background: transparent url('./img/star.svg') no-repeat left top;
+  background-size: 1.3em;
 }
 
-#hi > p {
-  width: 250px;
+#hi {
+  position: relative;
+  padding-top: 10rem;
+}
+
+#hi .columns {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#hi .left {
+  display: flex;
+  align-content: flex-end;
+  align-items: flex-end;
+  flex: 0.5;
+  flex-direction: column;
+}
+
+#hi .right {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
-#hi > img[src='./img/привет.svg'] {
-  position: absolute;
-  top: 150px;
-  left: 100px;
-  width: 200px;
-}
-
-#hi > img[src='./img/cat/гуру.svg'] {
-  position: absolute;
-  top: 210px;
-  left: 90px;
-  width: 220px;
-}
-
-@media (max-width: 768px) {
-  #hi {
-    width: 400px;
-    min-height: 230px;
-    padding-top: 180px;
-    padding-left: 150px;
-  }
-
-  #hi > img[src='./img/привет.svg'] {
-    left: 20px;
-    width: 130px;
-  }
-
-  #hi > img[src='./img/cat/гуру.svg'] {
-    top: 190px;
-    left: 10px;
-    width: 150px;
-  }
+#hi img[src='./img/привет.svg'],
+#hi img[src='./img/cat/гуру.svg'] {
+  width: 100%;
 }
 
 #try {
+  padding-top: 0;
   text-align: center;
 }
 
@@ -387,27 +390,17 @@ section > p {
   background-size: 1.3em;
 }
 
+#target .columns {
+  padding-top: 3%;
+}
+
+#target .left {
+  flex: 0.8;
+  text-align: right;
+}
+
 #target img[src='./img/cat/кому я подойду.svg'] {
-  position: absolute;
-  margin-top: -80px;
-}
-
-#target ul {
-  margin-top: 50px;
-  margin-left: 450px;
-}
-
-@media (max-width: 768px) {
-  #target img[src='./img/cat/кому я подойду.svg'] {
-    width: 200px;
-    margin-top: -20px;
-    margin-left: -43px;
-  }
-
-  #target ul {
-    margin-top: 30px;
-    margin-left: 140px;
-  }
+  width: 80%;
 }
 
 #important {
@@ -418,228 +411,125 @@ section > p {
   text-align: center;
 }
 
-#important p:before,
-#important p:after {
-  display: inline-block;
-  width: 1.7em;
-  height: 1.5em;
-  content: ' ';
-  vertical-align: middle;
-  background: transparent url('./img/star.svg') no-repeat left top;
-  background-size: 1.3em;
-}
-
 #important h2 {
-  padding-bottom: 30px;
+  padding-bottom: 3%;
 }
 
-@media (max-width: 768px) {
-  #important p {
-  }
+#i-can .left {
+  flex: 0.8;
+  text-align: right;
 }
 
-#i-can {
-  min-height: 520px;
-}
-
-#i-can ul {
-  margin-top: 50px;
-  margin-left: 400px;
+#i-can .right {
+  padding-top: 4%;
 }
 
 #i-can img[src='./img/cat/смотри что я могу.svg'] {
-  position: absolute;
-  width: 400px;
-  margin-top: -80px;
-}
-
-@media (max-width: 768px) {
-  #i-can {
-    min-height: 300px;
-  }
-
-  #i-can img[src='./img/cat/смотри что я могу.svg'] {
-    width: 160px;
-    margin-top: -30px;
-    margin-left: -10px;
-  }
-
-  #i-can ul {
-    margin-top: 20px;
-    margin-left: 140px;
-    list-style: none;
-  }
+  width: 80%;
 }
 
 #i-am-great {
-  min-height: 600px;
   background-color: #ffe9da;
 }
 
-#i-am-great ul {
-  margin-top: 50px;
-  margin-left: 400px;
+#i-am-great .left {
+  flex: 0.8;
+  text-align: right;
+}
+
+#i-am-great .right {
+  padding-top: 4%;
 }
 
 #i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
-  position: absolute;
-  width: 500px;
-  margin-top: -80px;
-  margin-left: -100px;
+  width: 80%;
 }
 
-@media (max-width: 768px) {
-  #i-am-great {
-    min-height: 300px;
-  }
-
-  #i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
-    width: 190px;
-    margin-top: -40px;
-    margin-left: -50px;
-  }
-
-  #i-am-great ul {
-    margin-top: 0;
-    margin-left: 140px;
-    list-style: none;
-  }
-}
-
-#founders .container {
-  min-height: 550px;
-}
-
-#founders h2 {
-  margin-bottom: 40px;
-}
-
-#founders .container {
+#founders {
   position: relative;
 }
 
-#out-photo {
+#founders .left {
+}
+
+#founders .right ul {
+  padding-bottom: 7%;
+}
+
+#our-photo {
+  position: relative;
+  width: 100%;
+}
+
+#our-photo .photo {
   position: absolute;
+  top: 11.2%;
+  left: 12.3%;
+  overflow: hidden;
+  width: 79.6%;
+  height: 66.4%;
 }
 
-#out-photo img[src='./img/photo/us.jpg'] {
-  position: absolute;
-  top: 53px;
-  left: 60px;
-  width: 400px;
+#our-photo .photo img {
+  width: 100%;
 }
 
-#out-photo img[src='./img/frames/рамка квадратная.svg'] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 505px;
-}
-
-#founders ul {
-  margin-top: 0;
-  margin-left: 531px;
-}
-
-@media (min-width: 769px) {
-  #founders ul:before {
-    position: absolute;
-    top: 494px;
-    left: 97px;
-    width: 505px;
-  }
+#our-photo img[src='./img/frames/рамка квадратная.svg'] {
+  position: relative;
+  width: 100%;
 }
 
 #alem-photo {
   position: relative;
-  height: 250px;
-  margin-top: 15px;
-  margin-left: 540px;
+  width: 60%;
 }
 
-#alem-photo img[src='./img/photo/Alem.jpg'] {
+#alem-photo .photo img {
   position: absolute;
-  top: 23px;
-  left: 19px;
-  width: 200px;
+  top: 10%;
+  left: 9%;
+  width: 87%;
+  border-radius: 50%;
 }
 
 #alem-photo img[src='./img/frames/рамка круглая.svg'] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 230px;
+  position: relative;
+  width: 100%;
 }
 
 #founders img[src='./img/cat/куку.svg'] {
   position: absolute;
+  right: 10%;
   bottom: -70px;
-  left: 605px;
+  width: 14%;
 }
 
-@media (max-width: 768px) {
-  #founders .container {
-    min-height: 350px;
-  }
+#our-photo:after {
+  position: absolute;
+  top: 79%;
+  left: 17%;
+  width: 70%;
+  content: attr(aria-label);
+  text-align: center;
+}
 
-  #founders h2 {
-    margin-bottom: 20px;
-  }
-
-  #out-photo img[src='./img/photo/us.jpg'] {
-    top: 20px;
-    left: 23px;
-    width: 120px;
-  }
-
-  #out-photo img[src='./img/frames/рамка квадратная.svg'] {
-    top: 0;
+@media (max-width: 700px) {
+  #our-photo:after {
+    top: 100%;
+    bottom: auto;
     left: 0;
-    width: 160px;
+    width: 100%;
   }
+}
 
-  #founders ul {
-    margin-top: 0;
-    margin-left: 170px;
-  }
-
-  #alem-photo {
-    position: relative;
-    height: 130px;
-    margin-top: 10px;
-    margin-left: 210px;
-  }
-
-  #alem-photo img[src='./img/photo/Alem.jpg'] {
-    position: absolute;
-    top: 12px;
-    left: 10px;
-    width: 100px;
-  }
-
-  #alem-photo img[src='./img/frames/рамка круглая.svg'] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 115px;
-  }
-
+@media (max-width: 480px) {
   #founders img[src='./img/cat/куку.svg'] {
-    position: absolute;
     bottom: -40px;
-    left: 242px;
-    width: 50px;
   }
 }
 
 #meet {
   background-color: #ffe9da;
-}
-
-#meet .container {
-}
-
-#meet ul {
 }
 
 #meet img[src='./img/frames/рамка квадратная.svg'] {
@@ -715,7 +605,7 @@ section > p {
 
 #history img[src='./img/cat/как появился gurucat.svg'] {
   position: absolute;
-  top: -8%;
+  top: -3%;
   left: 18%;
   width: 25%;
 }
@@ -782,14 +672,195 @@ section > p {
   padding-bottom: 15%;
 }
 
-#purrs,
-a[href='#purrs'],
-#pricing,
-a[href='#pricing'],
-#order,
-a[href='#order'],
-#contact,
-a[href='#contact'],
-.wip {
-  display: none;
+#history-made {
+  background-color: #ffe9da;
+}
+
+#history-made .quote1 {
+  width: 80%;
+}
+
+#history-made .quote1 p {
+  margin-bottom: 1em;
+}
+
+#history-made .quote2 {
+  text-align: center;
+}
+
+#history-made img[src='./img/лого.svg'] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+}
+
+#history-made img[src='./img/frames/рамка круглая.svg'] {
+  position: relative;
+  width: 100%;
+}
+
+#history-made .umbrella {
+  position: relative;
+  width: 30%;
+  margin: 5% auto;
+}
+
+#history-made .photo {
+  position: absolute;
+  top: 9%;
+  left: 8%;
+  overflow: hidden;
+  width: 86%;
+  height: 90%;
+}
+
+#history-made .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 50%;
+}
+
+#examples {
+}
+
+#examples .screenshot {
+  width: 60%;
+  margin: 5% auto;
+}
+
+#examples img[src='./img/cat/примеры.svg'] {
+  position: absolute;
+  top: 25%;
+  right: -5%;
+  width: 30%;
+}
+
+.screenshot {
+  position: relative;
+}
+
+.screenshot .photo {
+  position: absolute;
+  top: 4.5%;
+  left: 10.6%;
+  overflow: hidden;
+  width: 75.6%;
+  height: 91.2%;
+}
+
+.screenshot .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.screenshot img[src='./img/frames/рамка скриншот.svg'] {
+  /* position: relative; */
+  width: 100%;
+}
+
+#purrs {
+}
+
+#purrs .screenshot {
+  width: 60%;
+  margin: 5% auto;
+}
+
+#purrs img[src='./img/cat/что мурчат котики.svg'] {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 20%;
+}
+
+#pricing {
+}
+
+table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+table th,
+table td::before {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+table tr {
+  padding: 0.35em;
+}
+
+table th,
+table td {
+  padding: 0.625em;
+  text-align: center;
+  border-bottom: 1px solid #f8d0ba;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table thead {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    font-size: 0.8em;
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid #f17906;
+  }
+
+  table td::before {
+    font-weight: bold;
+    float: left;
+    content: attr(data-label);
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+#order {
+  padding-top: 0;
+}
+
+#order .left {
+  flex: 0.4;
+  text-align: right;
+}
+
+#order .right {
+  padding-top: 5%;
+}
+
+#order img[src='./img/cat/оставить заявку.svg'] {
+  width: 80%;
+}
+
+#order img[src='./img/buttons/оставить заявку.svg'] {
+  max-width: 100%;
+}
+
+#contact img[src='./img/cat/гуру.svg'] {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
 }
