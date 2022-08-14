@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "git push dev HEAD:master --force",
-    "svg": "svgo --pretty --multipass -f img --final-newline --recursive"
+    "svg": "svgo --pretty --multipass -f img --final-newline --recursive --eol lf"
   },
   "prettier": {
     "bracketSpacing": false,

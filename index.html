@@ -46,13 +46,21 @@
     </header>
     <main>
       <section id="hi">
-        <img src="./img/привет.svg" width="200" />
-        <img src="./img/cat/гуру.svg" width="200" />
-        <p>я GuruCat, помогу тебе делиться знаниями легко и просто.</p>
+        <div class="container">
+          <div class="columns">
+            <div class="left">
+              <img src="./img/привет.svg" />
+              <img src="./img/cat/гуру.svg" />
+            </div>
+            <div class="right">
+              <p>я GuruCat, помогу тебе делиться знаниями легко и просто.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="try">
-        <a href="https://t.me/Assem_Yskak" target="_blank">
+        <a href="https://t.me/GuruCatClub" target="_blank">
           <img src="./img/buttons/попробовать бесплатно.svg" />
         </a>
       </section>
@@ -70,15 +78,18 @@
 
           <p>Кто хочет оформить и запустить свой курс легко и быстро без помощи дополнительных специалистов.</p>
 
-          <img src="./img/cat/кому я подойду.svg" width="400" />
-
-          <ul aria-label="Это могут быть:">
-            <li>Онлайн курсы</li>
-            <li>Мастер-классы</li>
-            <li>Марафоны</li>
-            <li>Подписка на контент</li>
-            <li>Истории, рассказы</li>
-          </ul>
+          <div class="columns">
+            <div class="left"><img src="./img/cat/кому я подойду.svg" /></div>
+            <div class="right">
+              <ul aria-label="Это могут быть:">
+                <li>Онлайн курсы</li>
+                <li>Мастер-классы</li>
+                <li>Марафоны</li>
+                <li>Подписка на контент</li>
+                <li>Истории, рассказы</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -87,7 +98,10 @@
           <h2>
             <img src="./img/headers/это для меня важно.svg" />
           </h2>
-          <p class="stars">Хочу, чтобы все эксперты могли делиться своими знаниями через легкий и удобный сервис и стали счастливее ощутив ценность своего продукта и себя.</p>
+          <p class="stars">
+            Хочу, чтобы все эксперты могли делиться своими знаниями через легкий и удобный сервис и стали счастливее
+            ощутив ценность своего продукта и себя.
+          </p>
         </div>
       </section>
 
@@ -96,15 +110,20 @@
           <h2>
             <img src="./img/headers/что я могу.svg" />
           </h2>
-          <img src="./img/cat/смотри что я могу.svg" width="300" />
-
-          <ul>
-            <li>Сможешь получать и проверять домашние задания</li>
-            <li>Можешь разделить права админа и создавать курс с помощником</li>
-            <li>Сможешь с легкостью предоставить доступ на свой платный контент</li>
-            <li>Есть возможность создать Telegram лендинг</li>
-            <!--<li>Защита от копирования визуального медиа контента</li>-->
-          </ul>
+          <div class="columns">
+            <div class="left">
+              <img src="./img/cat/смотри что я могу.svg" width="300" />
+            </div>
+            <div class="right">
+              <ul>
+                <li>Сможешь получать и проверять домашние задания</li>
+                <li>Можешь разделить права админа и создавать курс с помощником</li>
+                <li>Сможешь с легкостью предоставить доступ на свой платный контент</li>
+                <li>Есть возможность создать Telegram лендинг</li>
+                <!--<li>Защита от копирования визуального медиа контента</li>-->
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -114,15 +133,20 @@
             <img src="./img/headers/какой я классный.svg" />
           </h2>
 
-          <img src="./img/cat/смотри какой я классный.svg" width="300" />
-
-          <ul>
-            <li>Легко создашь свой онлайн курс самостоятельно прямо на телефоне</li>
-            <li>Доступная цена</li>
-            <li>Безлимитное количество пользователей</li>
-            <li>Безлимитное количество уроков</li>
-            <li>Простой и понятный интерфейс для твоих учеников</li>
-          </ul>
+          <div class="columns">
+            <div class="left">
+              <img src="./img/cat/смотри какой я классный.svg" width="300" />
+            </div>
+            <div class="right">
+              <ul>
+                <li>Легко создашь свой онлайн курс самостоятельно прямо на телефоне</li>
+                <li>Доступная цена</li>
+                <li>Безлимитное количество пользователей</li>
+                <li>Безлимитное количество уроков</li>
+                <li>Простой и понятный интерфейс для твоих учеников</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -132,23 +156,31 @@
             <img src="./img/headers/основатели.svg" />
           </h2>
 
-          <div id="out-photo">
-            <img src="./img/photo/us.jpg" />
-            <img src="./img/frames/рамка квадратная.svg" />
+          <div class="columns">
+            <div class="left">
+              <div aria-label="Привет! Мы создатели бота Gurucat" id="our-photo">
+                <div class="photo">
+                  <img src="./img/photo/us.jpg" />
+                </div>
+                <img src="./img/frames/рамка квадратная.svg" />
+              </div>
+            </div>
+            <div class="right">
+              <ul>
+                <li>Влюблённая парочка</li>
+                <li>Муж и Жена</li>
+                <li>Друзья</li>
+                <li>А еще у нас есть Алемчик</li>
+              </ul>
+
+              <div id="alem-photo">
+                <div class="photo">
+                  <img src="./img/photo/Alem.jpg" />
+                </div>
+                <img src="./img/frames/рамка круглая.svg" />
+              </div>
+            </div>
           </div>
-
-          <ul aria-label="Привет! Мы создатели бота Gurucat">
-            <li>Влюблённая парочка</li>
-            <li>Муж и Жена</li>
-            <li>Друзья</li>
-            <li>А еще у нас есть Алемчик</li>
-          </ul>
-
-          <div id="alem-photo">
-            <img src="./img/photo/Alem.jpg" />
-            <img src="./img/frames/рамка круглая.svg" />
-          </div>
-
           <img src="./img/cat/куку.svg" width="100" />
         </div>
       </section>
@@ -249,7 +281,8 @@
 
           <div class="umbrella">
             <div class="photo">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" />
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" />
             </div>
             <img src="./img/frames/рамка круглая.svg" />
           </div>
@@ -269,7 +302,8 @@
 
           <div class="screenshot">
             <div class="photo">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" />
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" />
             </div>
             <img src="./img/frames/рамка скриншот.svg" />
           </div>
@@ -286,7 +320,8 @@
 
           <div class="screenshot">
             <div class="photo">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" />
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" />
             </div>
             <img src="./img/frames/рамка скриншот.svg" />
           </div>
