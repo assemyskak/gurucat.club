@@ -64,6 +64,7 @@ footer {
 
 section h2 {
   overflow: hidden;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -74,12 +75,17 @@ section h2 {
 
   section h2 img {
     transform: scale(0.7);
-    transform-origin: left bottom;
+    transform-origin: left top;
   }
 }
 
 @media (max-width: 480px) {
+  section h2 {
+    margin-bottom: 0;
+  }
+
   section h2 img {
+    max-width: 190%;
     transform: scale(0.5);
   }
 }
@@ -88,7 +94,6 @@ section h2 {
   display: flex;
   align-content: flex-start;
   align-items: stretch;
-  margin-top: 20px;
   gap: 4%;
 }
 
@@ -339,6 +344,7 @@ section > p {
 }
 
 #hi .left {
+  position: relative;
   display: flex;
   align-content: flex-end;
   align-items: flex-end;
@@ -357,6 +363,13 @@ section > p {
 #hi img[src='./img/привет.svg'],
 #hi img[src='./img/cat/гуру.svg'] {
   width: 100%;
+}
+
+#hi img[src='./img/telegram.svg'] {
+  position: absolute;
+  top: 33%;
+  right: -4%;
+  width: 27%;
 }
 
 #try {
@@ -401,6 +414,7 @@ section > p {
 
 #target img[src='./img/cat/кому я подойду.svg'] {
   width: 80%;
+  margin-right: 10%;
 }
 
 #important {
@@ -412,7 +426,7 @@ section > p {
 }
 
 #important h2 {
-  padding-bottom: 3%;
+  /* padding-bottom: 3%; */
 }
 
 #i-can .left {
@@ -426,6 +440,20 @@ section > p {
 
 #i-can img[src='./img/cat/смотри что я могу.svg'] {
   width: 80%;
+}
+
+@media (max-width: 480px) {
+  #i-can .columns {
+    flex-direction: column;
+  }
+
+  #i-can .left {
+    text-align: center;
+  }
+
+  #i-can img[src='./img/cat/смотри что я могу.svg'] {
+    width: 50%;
+  }
 }
 
 #i-am-great {
@@ -443,6 +471,20 @@ section > p {
 
 #i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
   width: 80%;
+}
+
+@media (max-width: 480px) {
+  #i-am-great .columns {
+    flex-direction: column;
+  }
+
+  #i-am-great .left {
+    text-align: center;
+  }
+
+  #i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
+    width: 50%;
+  }
 }
 
 #founders {
@@ -759,7 +801,6 @@ section > p {
 }
 
 .screenshot img[src='./img/frames/рамка скриншот.svg'] {
-  /* position: relative; */
   width: 100%;
 }
 
@@ -781,65 +822,100 @@ section > p {
 #pricing {
 }
 
-table {
+#pricing .table {
+  line-height: 3em;
+  position: relative;
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  border-collapse: collapse;
+  padding-left: 30%;
+  white-space: nowrap;
 }
 
-table th,
-table td::before {
+#pricing dl {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+#pricing dl:before {
   font-size: 0.85em;
+  font-weight: bold;
+  content: attr(aria-label);
+  text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-table tr {
-  padding: 0.35em;
-}
-
-table th,
-table td {
-  padding: 0.625em;
+#pricing dl dd {
   text-align: center;
   border-bottom: 1px solid #f8d0ba;
 }
 
+#pricing dl dt {
+  position: absolute;
+  display: none;
+  width: 30%;
+  margin-left: -30%;
+  text-align: left;
+  border-bottom: 1px solid #f8d0ba;
+}
+
+#pricing dl[aria-label='Котик'] dt {
+  display: block;
+}
+
 @media screen and (max-width: 600px) {
-  table {
-    border: 0;
+  #pricing .table {
+    flex-direction: column;
+    padding-left: 50%;
   }
 
-  table thead {
-    display: none;
+  #pricing dl {
+    left: 0;
+    padding-top: 3em;
+    text-align: left;
   }
 
-  table tr {
+  #pricing dl:before {
+    position: absolute;
     display: block;
-    margin-bottom: 0.625em;
+    margin-top: -3em;
+    margin-left: -50%;
   }
 
-  table td {
-    font-size: 0.8em;
-    display: block;
+  #pricing dl dt {
+    width: 50%;
+    margin-left: -50%;
+    text-align: left;
+  }
+
+  #pricing dl dd {
     text-align: right;
-    border-bottom: 1px solid #f17906;
   }
 
-  table td::before {
-    font-weight: bold;
-    float: left;
-    content: attr(data-label);
+  #pricing dl[aria-label='Про'],
+  #pricing dl[aria-label='Гуру'] {
+    padding-top: 5em;
   }
 
-  table td:last-child {
-    border-bottom: 0;
+  #pricing dl[aria-label='Про'] dt,
+  #pricing dl[aria-label='Гуру'] dt {
+    display: block;
   }
 }
 
 #order {
   padding-top: 0;
+}
+
+#order p {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 #order .left {
@@ -857,6 +933,11 @@ table td {
 
 #order img[src='./img/buttons/оставить заявку.svg'] {
   max-width: 100%;
+}
+
+#contact p {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 #contact img[src='./img/cat/гуру.svg'] {
