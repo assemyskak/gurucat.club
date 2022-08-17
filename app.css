@@ -64,6 +64,7 @@ footer {
 
 section h2 {
   overflow: hidden;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -74,12 +75,17 @@ section h2 {
 
   section h2 img {
     transform: scale(0.7);
-    transform-origin: left bottom;
+    transform-origin: left top;
   }
 }
 
 @media (max-width: 480px) {
+  section h2 {
+    margin-bottom: 0;
+  }
+
   section h2 img {
+    max-width: 190%;
     transform: scale(0.5);
   }
 }
@@ -88,7 +94,6 @@ section h2 {
   display: flex;
   align-content: flex-start;
   align-items: stretch;
-  margin-top: 20px;
   gap: 4%;
 }
 
@@ -339,6 +344,7 @@ section > p {
 }
 
 #hi .left {
+  position: relative;
   display: flex;
   align-content: flex-end;
   align-items: flex-end;
@@ -357,6 +363,13 @@ section > p {
 #hi img[src='./img/привет.svg'],
 #hi img[src='./img/cat/гуру.svg'] {
   width: 100%;
+}
+
+#hi img[src='./img/telegram.svg'] {
+  position: absolute;
+  top: 33%;
+  right: -4%;
+  width: 27%;
 }
 
 #try {
@@ -401,6 +414,7 @@ section > p {
 
 #target img[src='./img/cat/кому я подойду.svg'] {
   width: 80%;
+  margin-right: 10%;
 }
 
 #important {
@@ -412,7 +426,7 @@ section > p {
 }
 
 #important h2 {
-  padding-bottom: 3%;
+  /* padding-bottom: 3%; */
 }
 
 #i-can .left {
@@ -426,6 +440,20 @@ section > p {
 
 #i-can img[src='./img/cat/смотри что я могу.svg'] {
   width: 80%;
+}
+
+@media (max-width: 480px) {
+  #i-can .columns {
+    flex-direction: column;
+  }
+
+  #i-can .left {
+    text-align: center;
+  }
+
+  #i-can img[src='./img/cat/смотри что я могу.svg'] {
+    width: 50%;
+  }
 }
 
 #i-am-great {
@@ -443,6 +471,20 @@ section > p {
 
 #i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
   width: 80%;
+}
+
+@media (max-width: 480px) {
+  #i-am-great .columns {
+    flex-direction: column;
+  }
+
+  #i-am-great .left {
+    text-align: center;
+  }
+
+  #i-am-great img[src='./img/cat/смотри какой я классный.svg'] {
+    width: 50%;
+  }
 }
 
 #founders {
@@ -871,6 +913,11 @@ section > p {
   padding-top: 0;
 }
 
+#order p {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 #order .left {
   flex: 0.4;
   text-align: right;
@@ -886,6 +933,11 @@ section > p {
 
 #order img[src='./img/buttons/оставить заявку.svg'] {
   max-width: 100%;
+}
+
+#contact p {
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 #contact img[src='./img/cat/гуру.svg'] {
