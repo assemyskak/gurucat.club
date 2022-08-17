@@ -781,61 +781,484 @@ section > p {
 #pricing {
 }
 
-table {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border-collapse: collapse;
+.table {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'header-feature-cat  header-cat  header-pro  header-guru'
+    'feature-cat-01      cat-01      pro-01      guru-01    '
+    'feature-cat-02      cat-02      pro-02      guru-02    '
+    'feature-cat-03      cat-03      pro-03      guru-03    '
+    'feature-cat-04      cat-04      pro-04      guru-04    '
+    'feature-cat-05      cat-05      pro-05      guru-05    '
+    'feature-cat-06      cat-06      pro-06      guru-06    '
+    'feature-cat-07      cat-07      pro-07      guru-07    '
+    'feature-cat-08      cat-08      pro-08      guru-08    '
+    'feature-cat-09      cat-09      pro-09      guru-09    '
+    'feature-cat-10      cat-10      pro-10      guru-10    '
+    'feature-cat-11      cat-11      pro-11      guru-11    ';
 }
 
-table th,
-table td::before {
+.table div[class^='header'] {
   font-size: 0.85em;
+  font-weight: bold;
+  text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-table tr {
-  padding: 0.35em;
-}
-
-table th,
-table td {
-  padding: 0.625em;
+.table div {
+  line-height: 3em;
   text-align: center;
+  white-space: nowrap;
   border-bottom: 1px solid #f8d0ba;
 }
 
 @media screen and (max-width: 600px) {
-  table {
-    border: 0;
+  .table {
+    font-size: 0.8em;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      'header-cat           header-cat  '
+      'feature-cat-01       cat-01      '
+      'feature-cat-02       cat-02      '
+      'feature-cat-03       cat-03      '
+      'feature-cat-04       cat-04      '
+      'feature-cat-05       cat-05      '
+      'feature-cat-06       cat-06      '
+      'feature-cat-07       cat-07      '
+      'feature-cat-08       cat-08      '
+      'feature-cat-09       cat-09      '
+      'feature-cat-10       cat-10      '
+      'feature-cat-11       cat-11      '
+      'header-pro           header-pro  '
+      'feature-pro-01       pro-01      '
+      'feature-pro-02       pro-02      '
+      'feature-pro-03       pro-03      '
+      'feature-pro-04       pro-04      '
+      'feature-pro-05       pro-05      '
+      'feature-pro-06       pro-06      '
+      'feature-pro-07       pro-07      '
+      'feature-pro-08       pro-08      '
+      'feature-pro-09       pro-09      '
+      'feature-pro-10       pro-10      '
+      'feature-pro-11       pro-11      '
+      'header-guru          header-guru '
+      'feature-guru-01      guru-01     '
+      'feature-guru-02      guru-02     '
+      'feature-guru-03      guru-03     '
+      'feature-guru-04      guru-04     '
+      'feature-guru-05      guru-05     '
+      'feature-guru-06      guru-06     '
+      'feature-guru-07      guru-07     '
+      'feature-guru-08      guru-08     '
+      'feature-guru-09      guru-09     '
+      'feature-guru-10      guru-10     '
+      'feature-guru-11      guru-11     ';
   }
 
-  table thead {
+  .table .header-pro,
+  .table .header-guru {
+    margin-top: 4em;
+  }
+
+  .table div[class^='feature'] {
+    text-align: left;
+  }
+
+  .table [class^='cat'],
+  .table [class^='pro'],
+  .table [class^='guru'] {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .header-feature-pro {
     display: none;
   }
 
-  table tr {
-    display: block;
-    margin-bottom: 0.625em;
+  .feature-pro-01 {
+    display: none;
   }
 
-  table td {
-    font-size: 0.8em;
-    display: block;
-    text-align: right;
-    border-bottom: 1px solid #f17906;
+  .feature-pro-02 {
+    display: none;
   }
 
-  table td::before {
-    font-weight: bold;
-    float: left;
-    content: attr(data-label);
+  .feature-pro-03 {
+    display: none;
   }
 
-  table td:last-child {
-    border-bottom: 0;
+  .feature-pro-04 {
+    display: none;
   }
+
+  .feature-pro-05 {
+    display: none;
+  }
+
+  .feature-pro-06 {
+    display: none;
+  }
+
+  .feature-pro-07 {
+    display: none;
+  }
+
+  .feature-pro-08 {
+    display: none;
+  }
+
+  .feature-pro-09 {
+    display: none;
+  }
+
+  .feature-pro-10 {
+    display: none;
+  }
+
+  .feature-pro-11 {
+    display: none;
+  }
+
+  .header-feature-guru {
+    display: none;
+  }
+
+  .feature-guru-01 {
+    display: none;
+  }
+
+  .feature-guru-02 {
+    display: none;
+  }
+
+  .feature-guru-03 {
+    display: none;
+  }
+
+  .feature-guru-04 {
+    display: none;
+  }
+
+  .feature-guru-05 {
+    display: none;
+  }
+
+  .feature-guru-06 {
+    display: none;
+  }
+
+  .feature-guru-07 {
+    display: none;
+  }
+
+  .feature-guru-08 {
+    display: none;
+  }
+
+  .feature-guru-09 {
+    display: none;
+  }
+
+  .feature-guru-10 {
+    display: none;
+  }
+
+  .feature-guru-11 {
+    display: none;
+  }
+}
+
+.header-feature-cat {
+  grid-area: header-feature-cat;
+}
+
+.header-cat {
+  grid-area: header-cat;
+}
+
+.feature-cat-01 {
+  grid-area: feature-cat-01;
+}
+
+.cat-01 {
+  grid-area: cat-01;
+}
+
+.feature-cat-02 {
+  grid-area: feature-cat-02;
+}
+
+.cat-02 {
+  grid-area: cat-02;
+}
+
+.feature-cat-03 {
+  grid-area: feature-cat-03;
+}
+
+.cat-03 {
+  grid-area: cat-03;
+}
+
+.feature-cat-04 {
+  grid-area: feature-cat-04;
+}
+
+.cat-04 {
+  grid-area: cat-04;
+}
+
+.feature-cat-05 {
+  grid-area: feature-cat-05;
+}
+
+.cat-05 {
+  grid-area: cat-05;
+}
+
+.feature-cat-06 {
+  grid-area: feature-cat-06;
+}
+
+.cat-06 {
+  grid-area: cat-06;
+}
+
+.feature-cat-07 {
+  grid-area: feature-cat-07;
+}
+
+.cat-07 {
+  grid-area: cat-07;
+}
+
+.feature-cat-08 {
+  grid-area: feature-cat-08;
+}
+
+.cat-08 {
+  grid-area: cat-08;
+}
+
+.feature-cat-09 {
+  grid-area: feature-cat-09;
+}
+
+.cat-09 {
+  grid-area: cat-09;
+}
+
+.feature-cat-10 {
+  grid-area: feature-cat-10;
+}
+
+.cat-10 {
+  grid-area: cat-10;
+}
+
+.feature-cat-11 {
+  grid-area: feature-cat-11;
+}
+
+.cat-11 {
+  grid-area: cat-11;
+}
+
+.header-feature-pro {
+  grid-area: header-feature-pro;
+}
+
+.header-pro {
+  grid-area: header-pro;
+}
+
+.feature-pro-01 {
+  grid-area: feature-pro-01;
+}
+
+.pro-01 {
+  grid-area: pro-01;
+}
+
+.feature-pro-02 {
+  grid-area: feature-pro-02;
+}
+
+.pro-02 {
+  grid-area: pro-02;
+}
+
+.feature-pro-03 {
+  grid-area: feature-pro-03;
+}
+
+.pro-03 {
+  grid-area: pro-03;
+}
+
+.feature-pro-04 {
+  grid-area: feature-pro-04;
+}
+
+.pro-04 {
+  grid-area: pro-04;
+}
+
+.feature-pro-05 {
+  grid-area: feature-pro-05;
+}
+
+.pro-05 {
+  grid-area: pro-05;
+}
+
+.feature-pro-06 {
+  grid-area: feature-pro-06;
+}
+
+.pro-06 {
+  grid-area: pro-06;
+}
+
+.feature-pro-07 {
+  grid-area: feature-pro-07;
+}
+
+.pro-07 {
+  grid-area: pro-07;
+}
+
+.feature-pro-08 {
+  grid-area: feature-pro-08;
+}
+
+.pro-08 {
+  grid-area: pro-08;
+}
+
+.feature-pro-09 {
+  grid-area: feature-pro-09;
+}
+
+.pro-09 {
+  grid-area: pro-09;
+}
+
+.feature-pro-10 {
+  grid-area: feature-pro-10;
+}
+
+.pro-10 {
+  grid-area: pro-10;
+}
+
+.feature-pro-11 {
+  grid-area: feature-pro-11;
+}
+
+.pro-11 {
+  grid-area: pro-11;
+}
+
+.header-feature-guru {
+  grid-area: header-feature-guru;
+}
+
+.header-guru {
+  grid-area: header-guru;
+}
+
+.feature-guru-01 {
+  grid-area: feature-guru-01;
+}
+
+.guru-01 {
+  grid-area: guru-01;
+}
+
+.feature-guru-02 {
+  grid-area: feature-guru-02;
+}
+
+.guru-02 {
+  grid-area: guru-02;
+}
+
+.feature-guru-03 {
+  grid-area: feature-guru-03;
+}
+
+.guru-03 {
+  grid-area: guru-03;
+}
+
+.feature-guru-04 {
+  grid-area: feature-guru-04;
+}
+
+.guru-04 {
+  grid-area: guru-04;
+}
+
+.feature-guru-05 {
+  grid-area: feature-guru-05;
+}
+
+.guru-05 {
+  grid-area: guru-05;
+}
+
+.feature-guru-06 {
+  grid-area: feature-guru-06;
+}
+
+.guru-06 {
+  grid-area: guru-06;
+}
+
+.feature-guru-07 {
+  grid-area: feature-guru-07;
+}
+
+.guru-07 {
+  grid-area: guru-07;
+}
+
+.feature-guru-08 {
+  grid-area: feature-guru-08;
+}
+
+.guru-08 {
+  grid-area: guru-08;
+}
+
+.feature-guru-09 {
+  grid-area: feature-guru-09;
+}
+
+.guru-09 {
+  grid-area: guru-09;
+}
+
+.feature-guru-10 {
+  grid-area: feature-guru-10;
+}
+
+.guru-10 {
+  grid-area: guru-10;
+}
+
+.feature-guru-11 {
+  grid-area: feature-guru-11;
+}
+
+.guru-11 {
+  grid-area: guru-11;
 }
 
 #order {
