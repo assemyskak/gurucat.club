@@ -16,6 +16,40 @@
     <meta content="#ffffff" name="theme-color" />
     <link href="app.css" rel="stylesheet" />
     <title>GuruCat.club</title>
+
+    <script>
+      function carousel(container) {
+        let page = 0
+        const pages = container.querySelectorAll('.carousel > *')
+        pages.forEach((e, i) => {
+          e.style.transform = `translateX(${i * 100}%)`
+        })
+        const pagesCount = pages.length
+        const carousel = container.querySelector('.carousel')
+        function render() {
+          carousel.style.transform = `translateX(-${page * 100}%)`
+          container.querySelectorAll(`img[data-page]:not(img[data-page="${page}"])`).forEach(e => {
+            e.src = './img/circle.svg'
+          })
+          container.querySelector(`img[data-page="${page}"]`).src = './img/circle-full.svg'
+        }
+        function left() {
+          page = page - 1 < 0 ? pagesCount - 1 : page - 1
+          render()
+        }
+        function right() {
+          page = page + 1 > pagesCount - 1 ? 0 : page + 1
+          render()
+        }
+        function exact(e) {
+          page = parseInt(e.target.dataset.page, 10)
+          render()
+        }
+        container.querySelector('img[src="./img/arrow-right.svg"]').addEventListener('click', right)
+        container.querySelector('img[src="./img/arrow-left.svg"]').addEventListener('click', left)
+        container.querySelectorAll('img[data-page]').forEach(e => e.addEventListener('click', exact))
+      }
+    </script>
   </head>
   <body id="gurucat">
     <header>
@@ -78,7 +112,7 @@
 
           <p>
             GuruCat подойдёт всем тем, кто создаёт экспертный контент в целях обучения, презентации, кто хочет
-            структурированно подать свою информацию в Телеграме
+            структурировано подать свою информацию в Телеграме
           </p>
 
           <p>Кто хочет оформить и запустить свой курс легко и быстро без помощи дополнительных специалистов.</p>
@@ -308,14 +342,31 @@
 
           <div class="screenshot">
             <div class="photo">
-              <video controls width="100%">
-                <source src="./img/МК от Асем.mp4" type="video/mp4" />
-                Видео не поддерживается
-              </video>
+              <div class="carousel">
+                <video controls width="100%">
+                  <source src="./img/МК от Асем.mp4" type="video/mp4" />
+                  Видео не поддерживается
+                </video>
+                <video controls width="100%">
+                  <source src="./img/Все о сториз от Кати.mp4" type="video/mp4" />
+                  Видео не поддерживается
+                </video>
+              </div>
             </div>
             <img alt="" src="./img/frames/рамка скриншот.svg" />
           </div>
+          <div class="carousel-nav">
+            <img alt="" src="./img/arrow-left.svg" />
+            <div class="dots">
+              <img alt="" data-page="0" src="./img/circle-full.svg" />
+              <img alt="" data-page="1" src="./img/circle.svg" />
+            </div>
+            <img alt="" src="./img/arrow-right.svg" />
+          </div>
         </div>
+        <script>
+          ;(() => carousel(document.querySelector('#examples')))()
+        </script>
       </section>
 
       <section id="purrs">
@@ -328,14 +379,31 @@
 
           <div class="screenshot">
             <div class="photo">
-              <video controls width="100%">
-                <source src="./img/Отзыв от Марии.mp4" type="video/mp4" />
-                Видео не поддерживается
-              </video>
+              <div class="carousel">
+                <img alt="" src="./img/Отзыв от Елены.jpg" />
+                <img alt="" src="./img/Отзыв от Марии.jpg" />
+                <video controls width="100%">
+                  <source src="./img/Отзыв от Марии.mp4" type="video/mp4" />
+                  Видео не поддерживается
+                </video>
+              </div>
             </div>
             <img alt="" src="./img/frames/рамка скриншот.svg" />
           </div>
+
+          <div class="carousel-nav">
+            <img alt="" src="./img/arrow-left.svg" />
+            <div class="dots">
+              <img alt="" data-page="0" src="./img/circle-full.svg" />
+              <img alt="" data-page="1" src="./img/circle.svg" />
+              <img alt="" data-page="2" src="./img/circle.svg" />
+            </div>
+            <img alt="" src="./img/arrow-right.svg" />
+          </div>
         </div>
+        <script>
+          ;(() => carousel(document.querySelector('#purrs')))()
+        </script>
       </section>
 
       <section id="pricing">
@@ -370,7 +438,7 @@
               <dd>бесплатный</dd>
               <dt>&nbsp;</dt>
               <dd>
-                <a href="https://t.me/gurucat_free_bot" target="_blank">Заказать</a>
+                <a href="https://t.me/gurucat_free_bot" target="_blank">Закажи "Котика"</a>
               </dd>
             </dl>
 
@@ -399,7 +467,7 @@
               <dd>$100</dd>
               <dt>&nbsp;</dt>
               <dd>
-                <a href="https://t.me/gurucat_pro_bot" target="_blank">Заказать</a>
+                <a href="https://t.me/gurucat_pro_bot" target="_blank">Закажи "Про"</a>
               </dd>
             </dl>
 
@@ -428,7 +496,7 @@
               <dd>$180</dd>
               <dt>&nbsp;</dt>
               <dd>
-                <a href="https://t.me/gurucat_guru_bot" target="_blank">Заказать</a>
+                <a href="https://t.me/gurucat_guru_bot" target="_blank">Закажи "Гуру"</a>
               </dd>
             </dl>
           </div>

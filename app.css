@@ -854,21 +854,6 @@ section > p {
   border-radius: 50%;
 }
 
-#examples {
-}
-
-#examples .screenshot {
-  width: 60%;
-  margin: 5% auto;
-}
-
-#examples img[src='./img/cat/примеры.svg'] {
-  position: absolute;
-  top: 25%;
-  right: -5%;
-  width: 30%;
-}
-
 .screenshot {
   position: relative;
 }
@@ -882,15 +867,69 @@ section > p {
   height: 91.2%;
 }
 
-.screenshot .photo img {
+.screenshot .photo img,
+.screenshot .photo video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  /* max-height: 100%; */
 }
 
 .screenshot img[src='./img/frames/рамка скриншот.svg'] {
   width: 100%;
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 200ms;
+  transform: translateX(0);
+}
+
+.carousel-nav {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 25%;
+}
+
+@media (max-width: 480px) {
+  .carousel-nav {
+    padding: 0 1.5em;
+  }
+}
+
+.carousel-nav img {
+  cursor: pointer;
+}
+
+.carousel-nav .dots {
+  display: flex;
+}
+
+.carousel-nav .dots img {
+  margin: 0 0.2em;
+}
+
+#examples {
+}
+
+#examples .screenshot {
+  width: 60%;
+  margin: 5% auto 0 auto;
+}
+
+#examples img[src='./img/cat/примеры.svg'] {
+  position: absolute;
+  top: 25%;
+  right: -5%;
+  width: 30%;
 }
 
 #purrs {
@@ -898,7 +937,7 @@ section > p {
 
 #purrs .screenshot {
   width: 60%;
-  margin: 5% auto;
+  margin: 5% auto 0 auto;
 }
 
 #purrs img[src='./img/cat/что мурчат котики.svg'] {
@@ -918,11 +957,16 @@ section > p {
   align-content: center;
   align-items: flex-start;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: flex-end;
   width: 100%;
   padding-left: 30%;
   white-space: nowrap;
+}
+
+@media (max-width: 670px) {
+  #pricing .table {
+    font-size: 14px;
+  }
 }
 
 #pricing dl {
@@ -1051,6 +1095,7 @@ section > p {
   position: absolute;
   opacity: 0;
 }
+
 #faq label {
   font-size: 1.2em;
   font-weight: bold;
