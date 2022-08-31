@@ -958,6 +958,12 @@ section > p {
   display: block;
 }
 
+#pricing dl dd a {
+  padding: 0 1.3em 0 1em;
+  background: transparent url('./img/telegram.svg') no-repeat center right;
+  background-size: 1em;
+}
+
 @media screen and (max-width: 600px) {
   #pricing .table {
     flex-direction: column;
@@ -1022,6 +1028,50 @@ section > p {
 
 #order img[src='./img/buttons/оставить заявку.svg'] {
   max-width: 100%;
+}
+
+#faq {
+}
+
+#faq h2 {
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+#faq h3 {
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+#faq p + h3 {
+  margin-top: 1em;
+}
+
+#faq input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+#faq label {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  padding: 0.5em 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+#faq [type='checkbox'] + p {
+  overflow: hidden;
+  height: 0;
+  padding: 0 2em;
+  transition-duration: 200ms;
+  transition-property: height, padding;
+}
+
+#faq [type='checkbox']:checked + p {
+  overflow: hidden;
+  height: auto;
+  padding: 2em;
 }
 
 #contact p {
