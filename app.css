@@ -898,7 +898,6 @@ section > p {
   top: 0;
   left: 0;
   width: 100%;
-  /* max-height: 100%; */
 }
 
 .screenshot img[src='./img/frames/рамка скриншот.svg'] {
@@ -921,17 +920,16 @@ section > p {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 0 25%;
-}
-
-@media (max-width: 480px) {
-  .carousel-nav {
-    padding: 0 1.5em;
-  }
+  width: 45%;
+  margin: 1em auto 0 auto;
 }
 
 .carousel-nav img {
   cursor: pointer;
+}
+
+.carousel-nav > img {
+  width: 3em;
 }
 
 .carousel-nav .dots {
@@ -939,7 +937,25 @@ section > p {
 }
 
 .carousel-nav .dots img {
-  margin: 0 0.2em;
+  width: 1.6em;
+  height: 1.6em;
+  margin: 0 0.3em;
+}
+
+@media (max-width: 480px) {
+  .carousel-nav {
+    width: 60%;
+    margin-top: 1.5em;
+  }
+
+  .carousel-nav > img {
+    width: 2em;
+  }
+
+  .carousel-nav .dots img {
+    width: 1.3em;
+    height: 1.3em;
+  }
 }
 
 #examples {
