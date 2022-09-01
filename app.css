@@ -1049,6 +1049,10 @@ section > p {
   background-size: 1em;
 }
 
+#pricing dl dd:last-child {
+  border: none;
+}
+
 @media screen and (max-width: 600px) {
   #pricing .table {
     flex-direction: column;
@@ -1086,6 +1090,14 @@ section > p {
   #pricing dl[aria-label='Про'] dt,
   #pricing dl[aria-label='Гуру'] dt {
     display: block;
+  }
+
+  #pricing dl dd:last-child {
+    font-size: 1.5em;
+    line-height: 4em;
+    margin-left: -100%;
+    text-align: center;
+    border: none;
   }
 }
 
