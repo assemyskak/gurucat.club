@@ -1017,12 +1017,13 @@ section > p {
 }
 
 #pricing dl:before {
-  font-size: 0.85em;
+  font-size: 1.2em;
   font-weight: bold;
   content: attr(aria-label);
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: #f17906;
 }
 
 #pricing dl dd {
@@ -1066,9 +1067,10 @@ section > p {
   }
 
   #pricing dl:before {
+    font-size: 1.5em;
     position: absolute;
     display: block;
-    margin-top: -3em;
+    margin-top: -2em;
     margin-left: -50%;
   }
 
