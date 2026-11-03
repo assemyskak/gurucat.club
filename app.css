@@ -55,6 +55,31 @@ footer {
   text-align: center;
 }
 
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 1.5rem;
+  padding: 0 1rem;
+}
+
+footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #f17906;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+footer nav a:focus-visible {
+  border-radius: 2px;
+  outline: 3px solid #f17906;
+  outline-offset: 3px;
+}
+
 .container {
   position: relative;
   max-width: 800px;
